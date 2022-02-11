@@ -19,7 +19,7 @@ For instance
 
 ```
 cd s3-event-driven-function
-sls invoke local -f event-driven-function -p tests/event.json`
+sls invoke local -f event-driven-function -p tests/event.json
 ```
 
 For more sls info, run `sls` with `--help` option.
