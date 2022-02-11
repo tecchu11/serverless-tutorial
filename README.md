@@ -5,7 +5,7 @@
 ### Installation
 
 - Install node.js and python via asdf: `asdf install`
-- After install node and python, install serverless via npm: `npm install`
+- After install node, globally install serverless via npm: `npm install -g serverless`
 
 ### How to invoke on local env with test event json
 
