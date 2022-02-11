@@ -1,5 +1,7 @@
 # S3 event driven function with serverless framework(pyton)
 
+[![CI](https://github.com/tecchu11/s3-event-driven-function/actions/workflows/ci.yml/badge.svg)](https://github.com/tecchu11/s3-event-driven-function/actions/workflows/ci.yml)
+
 ## Get Started
 
 ### Installation

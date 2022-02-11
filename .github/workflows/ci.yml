@@ -21,6 +21,6 @@ jobs:
         run: |
           pip install boto3
       - name: sls invoke locally
-        uses: serverless/github-action@v3
-        with:
-          args: invoke local -f event-handler-function -p test/event.json
+        run: |
+          npm install -g serverless
+          sls invoke local -f event-handler-function -p test/event.json
