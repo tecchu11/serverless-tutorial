@@ -13,7 +13,7 @@ custom:
     dev: ${file(./config/config-dev.yml)}
 
 functions:
-  hello:
-    handler: handler.hello
+  event-handler-function:
+    handler: handler.execute
     environment: ${self:custom.environment.${self:provider.stage}}
 
