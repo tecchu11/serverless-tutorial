@@ -1,23 +1,20 @@
 {
-  "name": "s3-event-driven-function",
+  "name": "serverless-tutorial",
   "version": "1.0.0",
-  "description": "## Get Started",
+  "description": "serverless-tutorial",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tecchu11/s3-event-driven-function.git"
+    "url": "git+https://github.com/tecchu11/serverless-tutorial.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tecchu11/s3-event-driven-function/issues"
+    "url": "https://github.com/tecchu11/serverless-tutorial/issues"
   },
-  "homepage": "https://github.com/tecchu11/s3-event-driven-function#readme"
+  "homepage": "https://github.com/tecchu11/serverless-tutorial#readme"
 }
