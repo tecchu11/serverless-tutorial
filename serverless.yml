@@ -1,0 +1,19 @@
+service: s3-event-driven-function
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+  region: ap-northeast-1
+  stage: ${opt:stage, self:custom.default-stage}
+
+custom:
+  default-stage: dev
+  environment:
+    dev: ${file(./config/config-dev.yml)}
+
+functions:
+  hello:
+    handler: handler.hello
+    environment: ${self:custom.environment.${self:provider.stage}}
+
