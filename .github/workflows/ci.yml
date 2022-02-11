@@ -19,7 +19,7 @@ jobs:
           python-version: 3.9
       - name: install boto3
         run: |
-          pip install boto3
+          pip install -r requirements.txt
       - name: sls invoke locally
         run: |
           npm install -g serverless
