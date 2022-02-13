@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tecchu11/serverless-tutorial/issues"
   },
-  "homepage": "https://github.com/tecchu11/serverless-tutorial#readme"
+  "homepage": "https://github.com/tecchu11/serverless-tutorial#readme",
+  "devDependencies": {
+    "serverless-python-requirements": "^5.3.1"
+  }
 }
