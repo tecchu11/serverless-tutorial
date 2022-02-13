@@ -14,6 +14,9 @@ jobs:
         with:
           node-version: 17
           cache: npm
+      - name: install npm package
+        run: |
+          npm install
       - uses: actions/setup-python@v2
         with:
           python-version: 3.9
@@ -24,7 +27,6 @@ jobs:
         run: |
           pipenv install --dev
           pipenv graph
-          pipenv shell
       - name: install serverless
         run: |
           npm install -g serverless

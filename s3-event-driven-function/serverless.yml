@@ -17,3 +17,5 @@ functions:
     handler: handler.execute
     environment: ${self:custom.environment.${self:provider.stage}}
 
+plugins:
+  - serverless-python-requirements
