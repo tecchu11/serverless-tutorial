@@ -20,6 +20,7 @@ jobs:
       - name: install pipenv
         run: |
           pip install pipenv
+          pipenv graph
       - name: install dependencies
         run: |
           pipenv install --dev
