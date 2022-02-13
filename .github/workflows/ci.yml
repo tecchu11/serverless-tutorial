@@ -32,6 +32,5 @@ jobs:
           npm install -g serverless
       - name: sls invoke locally
         run: |
-          pip install boto3
-          sls invoke local -f event-driven-function -p tests/event.json
+          pipenv run sls invoke local -f event-driven-function -p tests/event.json
         working-directory: s3-event-driven-function
