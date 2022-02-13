@@ -24,6 +24,7 @@ jobs:
         run: |
           pipenv install --dev
           pipenv graph
+          pipenv shell
       - name: install serverless
         run: |
           npm install -g serverless
