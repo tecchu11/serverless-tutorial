@@ -19,7 +19,8 @@ jobs:
           python-version: 3.9
       - name: install requirements
         run: |
-          pip install -r requirements.txt
+          pip install pipenv
+          pipenv sync --dev
       - name: install serverless
         run: |
           npm install -g serverless
