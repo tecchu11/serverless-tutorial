@@ -20,10 +20,10 @@ jobs:
       - name: install pipenv
         run: |
           pip install pipenv
-          pipenv graph
       - name: install dependencies
         run: |
           pipenv install --dev
+          pipenv graph
       - name: install serverless
         run: |
           npm install -g serverless
