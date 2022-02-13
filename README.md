@@ -11,7 +11,8 @@ This is serverless framework tutorial.
 Install node.js and python via asdf: `asdf install`.After install node, globally install serverless via
 npm: `npm install -g serverless`.
 
-Second, install pipenv via pi: `pip install pipenv`. And then all dependencies: `pipenv sync --dev`.
+Second, install pipenv via pip: `pip install pipenv `. And then re-shim: `asdf reshim python`.Finally, install all
+dependencies: `pipenv install --dev`.
 
 ### How to invoke on local env with test event json
 
