@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/tecchu11/s3-event-driven-function/actions/workflows/ci.yml/badge.svg)](https://github.com/tecchu11/s3-event-driven-function/actions/workflows/ci.yml)
 
-This is serverless framework tutorial
+This is serverless framework tutorial.
 
 ## Get Started
 
@@ -10,6 +10,8 @@ This is serverless framework tutorial
 
 Install node.js and python via asdf: `asdf install`.After install node, globally install serverless via
 npm: `npm install -g serverless`.
+
+Second, install pipenv via pi: `pip install pipenv` .
 
 ### How to invoke on local env with test event json
 
