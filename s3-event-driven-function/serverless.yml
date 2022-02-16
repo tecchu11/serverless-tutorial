@@ -10,11 +10,11 @@ provider:
 custom:
   default-stage: dev
   environment:
-    dev: ${file(./config/config-dev.yml)}
+    dev: ${file(./config-dev.yml)}
 
 functions:
   event-driven-function:
-    handler: handler.execute
+    handler: src/handler.execute
     environment: ${self:custom.environment.${self:provider.stage}}
 
 plugins:

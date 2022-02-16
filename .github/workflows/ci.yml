@@ -14,23 +14,22 @@ jobs:
         with:
           node-version: 17
           cache: npm
-      - name: install npm package
+      - name: Install npm packages
         run: |
           npm install
       - uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      - name: install pipenv
+      - name: Install python packages via pipenv
         run: |
           pip install pipenv
-      - name: install dependencies
+          pipenv sync --dev
+      - name: check and lint
         run: |
-          pipenv install --dev
-          pipenv graph
-      - name: install serverless
+          pipenv run check
+          pipenv run lint
+
+      - name: Test
         run: |
-          npm install -g serverless
-      - name: sls invoke locally
-        run: |
-          pipenv run sls invoke local -f event-driven-function -p tests/event.json
-        working-directory: s3-event-driven-function
+          pipenv run pytest
+        working-directory: s3-event-driven-function/tests

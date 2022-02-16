@@ -4,10 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-boto3 = "*"
 
 [dev-packages]
 pytest = "*"
+autopep8 = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.9"
+
+[scripts]
+check = "flake8 --show-source ."
+lint = "autopep8 --diff -r  ."
+fmt = "autopep8 --in-place -r  ."
