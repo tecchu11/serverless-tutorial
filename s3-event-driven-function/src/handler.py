@@ -13,6 +13,5 @@ def parse_event(event) -> typing.Tuple[str, str]:
     world = os.environ['WORLD']
     print("Environment variables: {} {}".format(hello, world))
     bucket = event['Records'][0]['s3']['bucket']['name']
-    key = urllib.parse.unquote_plus(
-        event['Records'][0]['s3']['object']['key'], encoding='utf-8')
+    key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'], encoding='utf-8')
     return bucket, key
