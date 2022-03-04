@@ -1,5 +1,6 @@
 service: s3-event-driven-function
 frameworkVersion: '3'
+useDotenv: true
 
 provider:
   name: aws
@@ -9,13 +10,7 @@ provider:
 
 custom:
   default-stage: dev
-  environment:
-    dev: ${file(./config-dev.yml)}
 
 functions:
   event-driven-function:
     handler: src/handler.execute
-    environment: ${self:custom.environment.${self:provider.stage}}
-
-plugins:
-  - serverless-python-requirements
