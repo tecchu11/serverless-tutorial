@@ -9,9 +9,8 @@ def execute(event, context):
 
 
 def parse_event(event) -> typing.Tuple[str, str]:
-    hello = os.environ['HELLO']
-    world = os.environ['WORLD']
-    print("Environment variables: {} {}".format(hello, world))
+    env_name = os.environ['ENV_NAME']
+    print("Environment name is {}".format(env_name))
     bucket = event['Records'][0]['s3']['bucket']['name']
     key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'], encoding='utf-8')
     return bucket, key
