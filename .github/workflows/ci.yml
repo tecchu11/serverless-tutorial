@@ -33,3 +33,8 @@ jobs:
         run: |
           pipenv run pytest
         working-directory: s3-event-driven-function/tests
+
+      - name: Which sls
+        run: |
+          npx serverless -h
+        working-directory: s3-event-driven-function
