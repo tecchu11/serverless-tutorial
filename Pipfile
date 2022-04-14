@@ -7,13 +7,13 @@ name = "pypi"
 
 [dev-packages]
 pytest = "*"
-autopep8 = "*"
 flake8 = "*"
+black = "*"
 
 [requires]
 python_version = "3.9"
 
 [scripts]
 check = "flake8 --show-source ."
-lint = "autopep8 --diff -r  ."
-fmt = "autopep8 --in-place -r  ."
+lint = "black . --check"
+fmt = "black ."
