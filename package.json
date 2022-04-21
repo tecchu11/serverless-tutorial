@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "serverless": "3.14.0"
+    "serverless": "3.15.0"
   }
 }
