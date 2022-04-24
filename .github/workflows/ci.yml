@@ -28,6 +28,7 @@ jobs:
         run: |
           pipenv run check
           pipenv run lint
+          pipenv run type
 
       - name: Test
         run: |
