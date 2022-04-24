@@ -7,10 +7,11 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 
 s3_resource = boto3.resource(service_name="s3", endpoint_url="http://localhost:4566/")
 env_name = os.environ["ENV_NAME"]
-logger = Logger(service="s3-event-driven-function")
+logger = Logger()
 
 
 @event_source(data_class=S3Event)
+@logger.inject_lambda_context(log_event=True)
 def execute(event: S3Event, context: LambdaContext) -> None:
     bucket_name = event.bucket_name
     key_name = event.record.s3.get_object.key
