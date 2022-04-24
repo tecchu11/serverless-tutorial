@@ -1,18 +1,17 @@
 import os
-import typing
-import urllib.parse
+
+from aws_lambda_powertools.logging import Logger
+from aws_lambda_powertools.utilities.data_classes import S3Event
+from aws_lambda_powertools.utilities.typing import LambdaContext
+
+env_name = os.environ["ENV_NAME"]
+logger = Logger(service="s3-event-driven-function")
 
 
-def execute(event, context):
-    bucket, key = parse_event(event)
-    print("Bucket:{} Key:{}".format(bucket, key))
-
-
-def parse_event(event) -> typing.Tuple[str, str]:
-    env_name = os.environ["ENV_NAME"]
-    print("Environment name is {}".format(env_name))
-    bucket = event["Records"][0]["s3"]["bucket"]["name"]
-    key = urllib.parse.unquote_plus(
-        event["Records"][0]["s3"]["object"]["key"], encoding="utf-8"
+def execute(event: S3Event, context: LambdaContext) -> None:
+    bucket_name = event.bucket_name
+    key_name = event.record.s3.get_object.key
+    logger.info(
+        f"Bucket name {bucket_name} and Object key name {key_name} are parsed by event."
     )
-    return bucket, key
+    logger.info(f"Env is  {env_name}")
