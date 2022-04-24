@@ -9,6 +9,10 @@ name = "pypi"
 pytest = "*"
 flake8 = "*"
 black = "*"
+aws-lambda-powertools = "*"
+mypy = "*"
+boto3-stubs = {extras = ["s3"], version = "*"}
+boto3 = "*"
 
 [requires]
 python_version = "3.9"
@@ -17,3 +21,4 @@ python_version = "3.9"
 check = "flake8 --show-source ."
 lint = "black . --check"
 fmt = "black ."
+type = "mypy ."

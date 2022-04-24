@@ -28,13 +28,9 @@ jobs:
         run: |
           pipenv run check
           pipenv run lint
-
-      - name: Test
-        run: |
-          pipenv run pytest
-        working-directory: s3-event-driven-function/tests
+          pipenv run type
 
       - name: Which sls
         run: |
           npx serverless -h
-        working-directory: s3-event-driven-function
+        working-directory: s3_event_driven_function
