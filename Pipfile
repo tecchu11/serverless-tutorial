@@ -11,6 +11,8 @@ flake8 = "*"
 black = "*"
 aws-lambda-powertools = "*"
 mypy = "*"
+boto3-stubs = {extras = ["s3"], version = "*"}
+boto3 = "*"
 
 [requires]
 python_version = "3.9"
