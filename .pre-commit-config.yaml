@@ -21,3 +21,8 @@ repos:
     rev: ae2c0758c9e61a385df9700dc9c231bf54887041
     hooks:
       - id: black
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: bdfdfda2221c4fd123dbc9ac0f2074951bd5af58
+    hooks:
+      - id: mypy
