@@ -10,6 +10,7 @@ pytest = "*"
 flake8 = "*"
 black = "*"
 aws-lambda-powertools = "*"
+mypy = "*"
 
 [requires]
 python_version = "3.9"
